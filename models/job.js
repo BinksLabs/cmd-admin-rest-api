@@ -11,7 +11,7 @@ const JobSchema = new mongoose.Schema({
   },
   customer: String,
   description: String,
-  pastdue: String,
+  billed: Boolean,
   tags: Array,
   location: String,
   notes: Array,
