@@ -8,7 +8,10 @@ const app = express.Router()
 
 app.get("/jobs/get-all", authAdminUser, function(req, res) {
     if (!res.locals.authSuccess) {
-      res.json({authSuccess: false})
+      api.getAllJobs(function(apiResponse) {
+        apiResponse.authSuccess = true
+        res.json(apiResponse)
+      })
     } else {
       api.getAllJobs(function(apiResponse) {
         apiResponse.authSuccess = true
