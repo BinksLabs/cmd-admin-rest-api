@@ -15,8 +15,9 @@ const JobSchema = new mongoose.Schema({
   tags: Array,
   location: String,
   notes: Array,
+  images: Array,
 }, {collection: "jobs"})
 
-JobSchema.index({id: -1, urlTitle: 1})
+JobSchema.index({id: -1})
 
 module.exports = mongoose.model("Job", JobSchema)

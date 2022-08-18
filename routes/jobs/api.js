@@ -5,7 +5,7 @@ module.exports = {
   getAllJobs: function(callback) {
     const now = moment().unix()
 
-    JobModel.find({billed: true, billed: false}, "title id customer tags location billed")
+    JobModel.find({billed: true, billed: false}, "title id customer tags location billed images")
     .exec(function(error, jobs) {
       if (error) {
         callback({getDataError: true})
