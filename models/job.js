@@ -15,6 +15,7 @@ const JobSchema = new mongoose.Schema({
   tags: Array,
   location: String,
   notes: Array,
+  jobtype: String,
   images: Array,
 }, {collection: "jobs"})
 

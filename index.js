@@ -30,7 +30,7 @@ mongoose.connection.on("open", function() {
     console.log("Connected to database.")
   }
 })
-
+// change when deploying to web server
 app.use(helmet())
 const corsOptions ={
     origin:'http://localhost:3001',
